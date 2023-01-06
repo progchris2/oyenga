@@ -1,0 +1,52 @@
+{
+  "swagger": "2.0",
+  "info": {
+    "version": "1.0.1",
+    "title": "Test Api"
+  },
+  "paths": {
+    "/short_url": {
+      "post": {
+        "description": "Endpoint through which one can call the shortcut",
+        "requestBody": {
+          "description": "",
+          "content": {
+            "application/json": {
+              "schemas": {
+                "$ref": "#/definitions/schemas"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "A list of pets.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "string",
+                  "items": {
+                    "$ref": "#/components/schemas/short_url"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "definitions": {
+    "schemas": {
+        "short_url": {
+          "type": "object",
+          "properties": {
+            "url": {
+              "type": "string",
+              "description": "url to shorten"
+            }
+          }
+        }
+    }
+  }
+}

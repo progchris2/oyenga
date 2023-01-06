@@ -1,0 +1,4 @@
+
+@function  calculation_dimension($dim) {
+  @return calc(100% - $dim);
+}

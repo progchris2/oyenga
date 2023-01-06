@@ -1,0 +1,7 @@
+@mixin layout-home-page {
+  display: flex;
+  flex-direction: column;
+  width: calculation_dimension(100px);
+  margin: 0 auto;
+  padding: 10px;
+}
